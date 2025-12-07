@@ -35,7 +35,7 @@ export default function App() {
   const [error, setError] = useState('');
   const [favorites, setFavorites] = useState<string[]>([]);
 
-  const apiKey = 'c7dde26473480e8a5877750001f5b008'; // Vaihda oma OpenWeatherMap API-avain tähän
+  const apiKey = 'c7dde26473480e8a5877750001f5b008';
 
   useEffect(() => {
     loadFavorites();
@@ -135,11 +135,11 @@ export default function App() {
     const icon = weather.weather[0].icon;
     const main = weather.weather[0].main.toLowerCase();
 
-    if (icon.includes('n')) return '#001f3f'; // yö
+    if (icon.includes('n')) return '#001f3f';
     if (main.includes('rain')) return '#4a90e2';
     if (main.includes('cloud')) return '#7f8c8d';
     if (main.includes('snow')) return '#b0c4de';
-    return '#f5a623'; // aurinko / selkeä
+    return '#f5a623';
   };
 
   return (
@@ -283,11 +283,11 @@ const styles = StyleSheet.create({
     marginRight: 12,
     alignItems: 'center',
     justifyContent: 'flex-start',
-    paddingTop: 12, // Lisää ylätilaa, jotta ruksi näkyy kokonaan
+    paddingTop: 12,
   },
   favoriteCard: {
     backgroundColor: '#27c0efff',
-    paddingVertical: 16, // suurempi korkeus
+    paddingVertical: 16,
     paddingHorizontal: 16,
     borderRadius: 12,
     width: width / 4,
